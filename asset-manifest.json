@@ -1,7 +1,7 @@
 {
   "main.css": "/torch-pol-api/static/css/main.e136a07a.chunk.css",
-  "main.js": "/torch-pol-api/static/js/main.8dc5ca48.chunk.js",
-  "main.js.map": "/torch-pol-api/static/js/main.8dc5ca48.chunk.js.map",
+  "main.js": "/torch-pol-api/static/js/main.fdd56737.chunk.js",
+  "main.js.map": "/torch-pol-api/static/js/main.fdd56737.chunk.js.map",
   "static/js/1.ff144f70.chunk.js": "/torch-pol-api/static/js/1.ff144f70.chunk.js",
   "static/js/1.ff144f70.chunk.js.map": "/torch-pol-api/static/js/1.ff144f70.chunk.js.map",
   "runtime~main.js": "/torch-pol-api/static/js/runtime~main.cf046ecf.js",
@@ -9,6 +9,6 @@
   "static/media/logo.svg": "/torch-pol-api/static/media/logo.5d5d9eef.svg",
   "static/css/main.e136a07a.chunk.css.map": "/torch-pol-api/static/css/main.e136a07a.chunk.css.map",
   "index.html": "/torch-pol-api/index.html",
-  "precache-manifest.4a34fd5b9e9a6e5d000cd2a0306c1c59.js": "/torch-pol-api/precache-manifest.4a34fd5b9e9a6e5d000cd2a0306c1c59.js",
+  "precache-manifest.6abeefa09c06dd04236bb296e15b913a.js": "/torch-pol-api/precache-manifest.6abeefa09c06dd04236bb296e15b913a.js",
   "service-worker.js": "/torch-pol-api/service-worker.js"
 }
