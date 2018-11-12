@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import YouTube from 'react-youtube';
-
 class YoutubeComponent extends Component {
   state = { showVideo:false}
 
@@ -19,6 +18,15 @@ class YoutubeComponent extends Component {
   }
 
   render() {
+
+   var overlay= {
+position:"absolute",
+		margin:" 0 auto",
+marginLeft:"25%",
+opacity:.60
+  }
+
+
     var postStyle = {
       padding: 10,
       margin:10,
@@ -31,7 +39,10 @@ class YoutubeComponent extends Component {
     if(this.state.showVideo){
       embed = <div width="100%"><YouTube videoId={post.youtube_id} /></div>
     }else{
-      embed = <img width="100%" src={post.image_url} />
+      embed = <div>
+									<div style={overlay}><img src="/click_to_play.png" /></div>
+									<div><img width="100%" src={post.image_url} /></div>
+							</div>
     }
     return ( 
       <div style={postStyle}>
@@ -46,9 +57,4 @@ class YoutubeComponent extends Component {
   }
 }
 
-//<img src={post.image_url} />
-
 export default YoutubeComponent
-
-
-        //<YouTube videoId={post.youtube_id} />
