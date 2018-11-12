@@ -40,7 +40,6 @@ opacity:.60
       embed = <div width="100%"><YouTube videoId={post.youtube_id} /></div>
     }else{
       embed = <div>
-									<div style={overlay}><img src="/click_to_play.png" /></div>
 									<div><img width="100%" src={post.image_url} /></div>
 							</div>
     }
