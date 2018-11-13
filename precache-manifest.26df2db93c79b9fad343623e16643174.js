@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "fdd567374b1f56dc78bf",
+    "revision": "4f495804564097b441cf",
     "url": "/torch-pol-api/static/css/main.e136a07a.chunk.css"
   },
   {
-    "revision": "fdd567374b1f56dc78bf",
-    "url": "/torch-pol-api/static/js/main.fdd56737.chunk.js"
+    "revision": "4f495804564097b441cf",
+    "url": "/torch-pol-api/static/js/main.4f495804.chunk.js"
   },
   {
     "revision": "ff144f702848ed47c608",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/torch-pol-api/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "f01c6c77474e32cef9559d3c5fba08ba",
+    "revision": "38f52a0e1c225f7bac023e5c39b5a867",
     "url": "/torch-pol-api/index.html"
   }
 ];
