@@ -12,7 +12,7 @@ class YoutubeFeed extends Component {
     }
   }
   componentDidMount(){
-    fetch("https://cors-anywhere.herokuapp.com/https://www.torch1.com/pol-api/977")
+    fetch("https://cors-anywhere.herokuapp.com/https://www.torch1.com/posts/pol-api/977")
       .then(res => res.json())
       .then(json=>{
         this.setState({
