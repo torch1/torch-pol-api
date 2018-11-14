@@ -19,12 +19,6 @@ class YoutubeComponent extends Component {
 
   render() {
 
-   var overlay= {
-position:"absolute",
-		margin:" 0 auto",
-marginLeft:"25%",
-opacity:.60
-  }
 
 
     var postStyle = {
@@ -32,7 +26,9 @@ opacity:.60
       margin:10,
       backgroundColor:"#eff0f1",
       color:"#333",
-      dipslay:"inline-block"
+      display:"inline-block",
+      width:'400px'
+      
     }
     var post = this.props.item.post;
     var embed = <div></div>
@@ -40,12 +36,13 @@ opacity:.60
       embed = <div width="100%"><YouTube videoId={post.youtube_id} /></div>
     }else{
       embed = <div>
-									<div><img width="100%" src={post.image_url} /></div>
+									<div><img width="400px" src={post.image_url} /></div>
 							</div>
     }
     return ( 
       <div style={postStyle}>
         <div onClick={this.toggleVideo}>{embed}</div>
+        <h3>{post.name}</h3>
         <h4>{post.attachment_title}</h4>
         <div>
         <span>@{post.username}</span> | 

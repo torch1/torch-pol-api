@@ -24,13 +24,16 @@ class YoutubeFeed extends Component {
 
   render() {
     var { isLoaded, items } = this.state;
+    var containerStyle = {
+      width:'850px'
+    }
     if(!isLoaded){
       return (
         <div> Loading...  </div>
       );
     }else{
     return ( 
-      <div>
+      <div style={containerStyle}>
         {items.map(item =>(
             <div>
           <YoutubeComponent item={item} />
