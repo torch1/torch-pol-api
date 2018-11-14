@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import YoutubeComponent from './YoutubeComponent.js'
+import TorchItemComponent from './TorchItemComponent.js'
 
 
 class YoutubeFeed extends Component {
@@ -12,7 +12,8 @@ class YoutubeFeed extends Component {
     }
   }
   componentDidMount(){
-    fetch("https://cors-anywhere.herokuapp.com/https://www.torch1.com/posts/pol-api/977")
+    fetch("https://cors-anywhere.herokuapp.com/https://www.torch1.com/fc-api/915")
+    //fetch("https://cors-anywhere.herokuapp.com/https://www.torch1.com/posts/pol-api/977")
       .then(res => res.json())
       .then(json=>{
         this.setState({
@@ -36,7 +37,7 @@ class YoutubeFeed extends Component {
       <div style={containerStyle}>
         {items.map(item =>(
             <div>
-          <YoutubeComponent item={item} />
+          <TorchItemComponent item={item} />
           </div>
         ))}
       </div>
