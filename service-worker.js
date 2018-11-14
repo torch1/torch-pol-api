@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/torch-pol-api/precache-manifest.bac1ccea33131148a6028d7c0d9b00d4.js"
+  "/torch-pol-api/precache-manifest.8e86c20edc5659e02580d4182882c4e6.js"
 );
 
 workbox.clientsClaim();
