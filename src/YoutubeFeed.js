@@ -60,19 +60,23 @@ class YoutubeFeed extends Component {
     var containerStyle = {
       width:'850px'
     }
+    let header = <div class='shiny-btn-ctn'>
+      <button class="shiny-btn" onClick={this.changeChannelPolitician}>All U.S. Politicians</button>
+      <button class="shiny-btn" onClick={this.changeChannelIndia}>India Philanthropy Scan</button>
+      <button class="shiny-btn" onClick={this.changeChannelCarnegie}>Carnegie</button>
+    </div>
     if(!isLoaded){
       return (
+        <div>
+        {header}
         <div> Loading...  </div>
+        </div>
       );
     }else{
     return ( 
     <div>
-    <div>
-      <button onClick={this.changeChannelPolitician}>All U.S. Politicians</button>
-      <button onClick={this.changeChannelIndia}>India Philanthropy Scan</button>
-      <button onClick={this.changeChannelCarnegie}>Carnegie</button>
-    </div>
       <div style={containerStyle}>
+        {header}
         {items.map(item =>(
             <div>
           <TorchItemComponent item={item} />
