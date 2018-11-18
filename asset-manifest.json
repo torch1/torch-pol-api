@@ -1,14 +1,14 @@
 {
-  "main.css": "/torch-pol-api/static/css/main.b6c6197d.chunk.css",
-  "main.js": "/torch-pol-api/static/js/main.e3cfdce2.chunk.js",
-  "main.js.map": "/torch-pol-api/static/js/main.e3cfdce2.chunk.js.map",
-  "static/js/1.d878ef8f.chunk.js": "/torch-pol-api/static/js/1.d878ef8f.chunk.js",
-  "static/js/1.d878ef8f.chunk.js.map": "/torch-pol-api/static/js/1.d878ef8f.chunk.js.map",
+  "main.css": "/torch-pol-api/static/css/main.243e5769.chunk.css",
+  "main.js": "/torch-pol-api/static/js/main.2cb3ce78.chunk.js",
+  "main.js.map": "/torch-pol-api/static/js/main.2cb3ce78.chunk.js.map",
+  "static/js/1.c77eb8e2.chunk.js": "/torch-pol-api/static/js/1.c77eb8e2.chunk.js",
+  "static/js/1.c77eb8e2.chunk.js.map": "/torch-pol-api/static/js/1.c77eb8e2.chunk.js.map",
   "runtime~main.js": "/torch-pol-api/static/js/runtime~main.cf046ecf.js",
   "runtime~main.js.map": "/torch-pol-api/static/js/runtime~main.cf046ecf.js.map",
-  "static/media/logo.svg": "/torch-pol-api/static/media/logo.5d5d9eef.svg",
-  "static/css/main.b6c6197d.chunk.css.map": "/torch-pol-api/static/css/main.b6c6197d.chunk.css.map",
+  "static/media/logo.svg": "/torch-pol-api/static/media/logo.8c4d3470.svg",
+  "static/css/main.243e5769.chunk.css.map": "/torch-pol-api/static/css/main.243e5769.chunk.css.map",
   "index.html": "/torch-pol-api/index.html",
-  "precache-manifest.21307f586bfd6a3424a527bb7c8cdae5.js": "/torch-pol-api/precache-manifest.21307f586bfd6a3424a527bb7c8cdae5.js",
+  "precache-manifest.c07a9e4b6f3ae313f65a03905de840e4.js": "/torch-pol-api/precache-manifest.c07a9e4b6f3ae313f65a03905de840e4.js",
   "service-worker.js": "/torch-pol-api/service-worker.js"
 }
