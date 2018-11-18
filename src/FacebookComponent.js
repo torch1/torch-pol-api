@@ -3,17 +3,9 @@ import YouTube from 'react-youtube';
 class FacebookComponent extends Component {
   constructor(props) {
     super(props);
-        this.toggleVideo = this.toggleVideo.bind(this);
 
   }
 
-  toggleVideo(){
-    //this.state.showVideo = !this.state.showVideo;
-    this.setState((state,props) => {
-      return {showVideo:!state.showVideo}
-    });
-    //this.state.showVideo = !this.state.showVideo;
-  }
 
   render() {
 
@@ -30,16 +22,12 @@ class FacebookComponent extends Component {
     }
     var post = this.props.item.post;
     var embed = <div></div>
-    if(this.state.showVideo){
-      embed = <div width="100%"><YouTube videoId={post.youtube_id} /></div>
-    }else{
-      embed = <div>
-									<div><img width="400px" src={post.image_url} /></div>
-							</div>
-    }
+    embed = <div>
+                <div><img width="400px" src={post.image_url} /></div>
+            </div>
     return ( 
       <div style={postStyle}>
-        <div onClick={this.toggleVideo}>{embed}</div>
+        <div >{embed}</div>
         <h3>{post.name}</h3>
         <h4>{post.attachment_title}</h4>
         <div>

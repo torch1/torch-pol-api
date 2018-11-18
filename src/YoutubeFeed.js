@@ -8,11 +8,18 @@ class YoutubeFeed extends Component {
     super(props);
     this.state = {
       items: [],
-      isLoaded: false
+      isLoaded: false,
+      url : "https://cors-anywhere.herokuapp.com/https://www.torch1.com/posts/pol-api/977"
     }
+
+      this.changeChannelPolitician = this.changeChannelPolitician.bind(this);
+      this.changeChannelIndia = this.changeChannelIndia.bind(this);
+      this.changeChannelCarnegie = this.changeChannelCarnegie.bind(this);
+      this.get = this.get.bind(this);
   }
-  componentDidMount(){
-    fetch("https://cors-anywhere.herokuapp.com/https://www.torch1.com/fc-api/915") //fetch("https://cors-anywhere.herokuapp.com/https://www.torch1.com/posts/pol-api/977")
+  get(){
+    if(!this.state.url){return}
+    fetch(this.state.url)
       .then(res => res.json())
       .then(json=>{
         this.setState({
@@ -21,6 +28,32 @@ class YoutubeFeed extends Component {
         })
       })
   }
+  componentDidMount(){
+    this.get()
+  }
+  changeChannelIndia(){
+    this.setState(
+        { url :"https://cors-anywhere.herokuapp.com/https://www.torch1.com/fc-api/915", 
+            isLoaded:false},
+        () => this.get()
+    )
+  }
+  changeChannelPolitician(){
+
+    this.setState(
+        { url :"https://cors-anywhere.herokuapp.com/https://www.torch1.com/posts/pol-api/977",
+            isLoaded:false},
+        () => this.get()
+    )
+  }
+  changeChannelCarnegie(){
+    this.setState(
+        { url : "https://cors-anywhere.herokuapp.com/https://www.torch1.com/posts/carnegie-api/1091",
+            isLoaded:false},
+        () => this.get()
+    )
+  }
+
 
   render() {
     var { isLoaded, items } = this.state;
@@ -33,12 +66,19 @@ class YoutubeFeed extends Component {
       );
     }else{
     return ( 
+    <div>
+    <div>
+      <button onClick={this.changeChannelPolitician}>All U.S. Politicians</button>
+      <button onClick={this.changeChannelIndia}>India Philanthropy Scan</button>
+      <button onClick={this.changeChannelCarnegie}>Carnegie</button>
+    </div>
       <div style={containerStyle}>
         {items.map(item =>(
             <div>
           <TorchItemComponent item={item} />
           </div>
         ))}
+      </div>
       </div>
     )
   }}
