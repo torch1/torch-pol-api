@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "2cb3ce78924c953f8e7b",
+    "revision": "78b7c7556eeaa259c720",
     "url": "/torch-pol-api/static/css/main.243e5769.chunk.css"
   },
   {
-    "revision": "2cb3ce78924c953f8e7b",
-    "url": "/torch-pol-api/static/js/main.2cb3ce78.chunk.js"
+    "revision": "78b7c7556eeaa259c720",
+    "url": "/torch-pol-api/static/js/main.78b7c755.chunk.js"
   },
   {
-    "revision": "c77eb8e2304ce4ed1ef7",
-    "url": "/torch-pol-api/static/js/1.c77eb8e2.chunk.js"
+    "revision": "7508c2b0f4f5c9a320c9",
+    "url": "/torch-pol-api/static/js/1.7508c2b0.chunk.js"
   },
   {
     "revision": "cf046ecfd643f9c2ee00",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/torch-pol-api/static/media/logo.8c4d3470.svg"
   },
   {
-    "revision": "f794a37010dc9c2807b78fffdfc1d02d",
+    "revision": "8aec1c31316c5c8574ef5250f6f10418",
     "url": "/torch-pol-api/index.html"
   }
 ];
