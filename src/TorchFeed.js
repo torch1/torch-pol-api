@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TorchItemComponent from './TorchItemComponent.js'
 
 
-class YoutubeFeed extends Component {
+class TorchFeed extends Component {
 
   constructor(props){
     super(props);
@@ -89,5 +89,5 @@ class YoutubeFeed extends Component {
 }
 
 
-export default YoutubeFeed
+export default TorchFeed
 

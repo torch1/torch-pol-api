@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import './shiny-button.css';
 
-import YoutubeFeed from './YoutubeFeed.js'
+import TorchFeed from './TorchFeed.js'
 
 class App extends Component {
   render() {
@@ -13,7 +13,7 @@ class App extends Component {
           <img src={logo} alt="logo" />
         </header>
         <content>
-          <YoutubeFeed />
+          <TorchFeed />
         </content>
       </div>
     );
