@@ -9,12 +9,10 @@ class TorchFeed extends Component {
     this.state = {
       items: [],
       isLoaded: false,
-      url : "https://cors-anywhere.herokuapp.com/https://www.torch1.com/posts/pol-api/977"
-    }
 
-      this.changeChannelPolitician = this.changeChannelPolitician.bind(this);
-      this.changeChannelIndia = this.changeChannelIndia.bind(this);
-      this.changeChannelCarnegie = this.changeChannelCarnegie.bind(this);
+      url : `https://cors-anywhere.herokuapp.com/${props.base_url}/api/${props.feed_type}/${props.feed_id}`
+     //url : `/torch-api-feed/posts.json`
+    }
       this.get = this.get.bind(this);
   }
   get(){
@@ -31,58 +29,28 @@ class TorchFeed extends Component {
   componentDidMount(){
     this.get()
   }
-  changeChannelIndia(){
-    this.setState(
-        { url :"https://cors-anywhere.herokuapp.com/https://www.torch1.com/fc-api/915", 
-            isLoaded:false},
-        () => this.get()
-    )
-  }
-  changeChannelPolitician(){
-
-    this.setState(
-        { url :"https://cors-anywhere.herokuapp.com/https://www.torch1.com/posts/pol-api/977",
-            isLoaded:false},
-        () => this.get()
-    )
-  }
-  changeChannelCarnegie(){
-    this.setState(
-        { url : "https://cors-anywhere.herokuapp.com/https://www.torch1.com/posts/carnegie-api/1091",
-            isLoaded:false},
-        () => this.get()
-    )
-  }
+  
 
 
   render() {
     var { isLoaded, items } = this.state;
     var containerStyle = {
-      width:'850px'
+      maxWidth:'850px',
+      width: '100%',
     }
-    let header = <div class='shiny-btn-ctn'>
-      <button class="shiny-btn" onClick={this.changeChannelPolitician}>All U.S. Politicians</button>
-      <button class="shiny-btn" onClick={this.changeChannelIndia}>India Philanthropy Scan</button>
-      <button class="shiny-btn" onClick={this.changeChannelCarnegie}>Carnegie</button>
-    </div>
+    
     if(!isLoaded){
-      return (
-        <div>
-        {header}
-        <div> Loading...  </div>
-        </div>
-      );
-    }else{
+      return (<div style={containerStyle}><span style={{color: '#4f5f6f', fontSize: 18, fontWeight: 'bold'}}>Loading...</span></div> );
+    } else if(items && items.length === 0){
+      return (<div style={containerStyle}><span style={{color: '#4f5f6f', fontSize: 18, fontWeight: 'bold'}}>No feed to show.</span></div> );
+    } else{
     return ( 
-    <div>
       <div style={containerStyle}>
-        {header}
-        {items.map(item =>(
-            <div>
-          <TorchItemComponent item={item} />
+        {items.map((item, i) =>(
+          <div key={"torch_posts_feed_" + i}>
+            <TorchItemComponent item={item} />
           </div>
         ))}
-      </div>
       </div>
     )
   }}

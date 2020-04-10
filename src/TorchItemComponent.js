@@ -2,20 +2,24 @@ import React, { Component } from 'react';
 import YoutubeComponent from './YoutubeComponent.js'
 import FacebookComponent from './FacebookComponent.js'
 import TwitterComponent from './TwitterComponent.js'
+import InstagramComponent from './InstagramComponent.js'
 
 class TorchItemComponent extends Component {
   render() {
     var type = this.props.item.post_type;
-    if(type == 'youtube'){
+    if(type === 'youtube'){
           return ( <YoutubeComponent item={this.props.item} /> )
     }
-    if(type == 'tweet'){
+    if(type === 'tweet'){
           return ( <TwitterComponent item={this.props.item} /> )
     }
-    if(type == 'facebook'){
+    if(type === 'facebook'){
           return ( <FacebookComponent item={this.props.item} /> )
     }
-    return <div></div>
+    if(type === 'instagram'){
+          return ( <InstagramComponent item={this.props.item} /> )
+    }
+    return null; 
   }
 }
 
