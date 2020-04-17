@@ -24,19 +24,22 @@ class TorchFeed extends Component {
           isLoaded:true,
           items:json
         })
-      })
+      }).catch(err => {
+        console.log(err);
+
+      });
   }
   componentDidMount(){
     this.get()
   }
-  
-
 
   render() {
     var { isLoaded, items } = this.state;
     var containerStyle = {
       maxWidth:'850px',
       width: '100%',
+      display: 'inline-block',
+      verticalAlign: 'top',
     }
     
     if(!isLoaded){
@@ -47,7 +50,7 @@ class TorchFeed extends Component {
     return ( 
       <div style={containerStyle}>
         {items.map((item, i) =>(
-          <div key={"torch_posts_feed_" + i}>
+          <div className="torch-api-feed-post-container" key={"torch_posts_feed_" + i}>
             <TorchItemComponent item={item} />
           </div>
         ))}

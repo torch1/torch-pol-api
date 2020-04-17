@@ -7,8 +7,6 @@ import {faFacebookF} from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-import pa from 'postgres-array';
-
 export default class FacebookComponent extends Component {
 
 
@@ -21,8 +19,8 @@ export default class FacebookComponent extends Component {
         <header style={header_style}>
           <img style={thumbnail_style} src={post.profile_image} />
           <h3 style={title_style}>
-          <a style={{textDecoration: 'none', color: "inherit"}} target="_blank" href={"https://facebook.com/" + post.post_id}>
-            {post.name}
+          <a style={{textDecoration: 'none', color: "inherit", textTransform: 'capitalize'}} target="_blank" href={"https://facebook.com/" + post.post_id}>
+            {post.name.toLowerCase()}
           </a>
           <div style={username_style}>@{post.username}</div> 
           </h3>

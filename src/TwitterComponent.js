@@ -21,8 +21,8 @@ class TwitterComponent extends Component {
         <header style={header_style}>
           <img style={thumbnail_style} src={post.profile_image} />
           <h3 style={title_style}>
-          <a style={{textDecoration: 'none', color: "inherit"}} target="_blank" href={"http://twitter.com/"+post.username+"/status/"+ post.post_id}>
-            {post.name}
+          <a style={{textDecoration: 'none', color: "inherit", textTransform: 'capitalize'}} target="_blank" href={"http://twitter.com/"+post.username+"/status/"+ post.post_id}>
+            {post.name.toLowerCase()}
           </a>
           <div style={username_style}>@{post.username}</div> 
           </h3>

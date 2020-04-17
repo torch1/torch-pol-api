@@ -15,6 +15,7 @@
 }
 .torch-api-feed-app p a{
   color: #FE954E !important;
+  word-break: break-all;
  }
 .torch-api-feed-app main{
   display: flex !important;
@@ -22,6 +23,7 @@
   align-items: center !important;
   justify-content: center !important;
   padding: 10px 0 !important;
+  background-color: #f9f9f9;
 }
 
 .torch-api-feed-app-header {
@@ -45,9 +47,8 @@
 }
 
 
-.torch-feed-post-container {
-  width: 100%;
+.torch-api-feed-app .post-thumbnail {
+  max-width: 50%;
+  max-width: calc(50% - 12px);
 }
-
-
 

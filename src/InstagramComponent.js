@@ -43,23 +43,15 @@ export default class InstagramComponent extends Component {
         <header style={header_style}>
           <img style={thumbnail_style} src={post.profile_image} />
           <h3 style={title_style}>
-          <a style={{textDecoration: 'none', color: "inherit"}} target="_blank" href={"https://www.instagram.com/p/" + post.youtube_id}>
-            {post.name + '\n'}
+          <a style={{textDecoration: 'none', color: "inherit", textTransform: 'capitalize'}} target="_blank" href={"https://www.instagram.com/p/" + post.youtube_id}>
+            {post.name.toLowerCase()}
           </a>
           <div style={username_style}>@{post.username}</div> 
           </h3>
         </header>
         {/*<h4>{post.attachment_title}</h4>*/}
         <div style={content_style}>
-          <img width="192px" onError={() => {
-            /*
-            if (!this.state.thumbnail_url) {
-              on_image_error(post.youtube_id).then(thumbnail_url => {
-                this.setState({thumbnail_url: thumbnail_url})
-              });
-            }
-              */
-          }} src={`https://api.instagram.com/p/${post.youtube_id}/media`} style={{float: 'left', marginRight: 12}} />
+          <img width="192px" className="post-thumbnail" alt="thumbnail" src={`https://api.instagram.com/p/${post.youtube_id}/media`} style={{float: 'left', marginRight: 12}} />
           <div style={{...username_style ,paddingBottom: 6}}><DateText date_string={post.created} /></div>
           <p style={text_style} dangerouslySetInnerHTML={{__html: post.text}}></p>
           {/*<span>{post.plays_count} views </span> | */}
