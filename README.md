@@ -46,10 +46,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### Notes
 
-The file `asset-manifest.json` contains all generated hashed paths to load the necessary dependencies for the embedded feed widget. 
-The folder `static`  contains all dependencies described by `asset-manifest.json`.
-There is an example html file to test the widget from the Torch server on `torch/webroot/embed/api_feed_test.html`.
-The start up scripts that will request `asset-manifest.json` and load all the dependencies are located in `torch/webroot/embed/` (chip.js and cadid.js)
+- The file `asset-manifest.json` contains all generated hashed paths to load the necessary dependencies for the embedded feed widget. 
+- The folder `static`  contains all dependencies described by `asset-manifest.json`.
+- There is an example html file to test the widget from the Torch server on `torch/webroot/embed/api_feed_test.html`.
+- The start up scripts that will request `asset-manifest.json` and load all the dependencies are located in `torch/webroot/embed/` (chip.js and cadid.js)
 
 ## Learn More
 
