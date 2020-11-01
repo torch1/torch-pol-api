@@ -37,6 +37,20 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+
+### How to updates the files on the Torch web server
+** Steps to upload your local build (after running `npm run build`) to the Torch web server.
+
+- Replace the file `torch/webroot/embed/torch-api-feed/asset-manifest.json` on the server `[torch-api-feed-project-root]/build/asset-manifest.json from your local build.
+- Replace the folder `torch/webroot/embed/torch-api-feed/static` on the server `[torch-api-feed-project-root]/build/static from your local build.
+
+### Notes
+
+The file `asset-manifest.json` contains all generated hashed paths to load the necessary dependencies for the embedded feed widget. 
+The folder `static`  contains all dependencies described by `asset-manifest.json`.
+There is an example html file to test the widget from the Torch server on `torch/webroot/embed/api_feed_test.html`.
+The start up scripts that will request `asset-manifest.json` and load all the dependencies are located in `torch/webroot/embed/` (chip.js and cadid.js)
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
