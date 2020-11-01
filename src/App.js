@@ -9,10 +9,12 @@ function App (props) {
   var base_url = "http://jesus2.torch1.com";
   var feed_id = "1282";
   var feed_type = "saved-search";
+  var main_styles = {height: 400, overflow: 'auto'};
   */
   var base_url = props.base_url;
   var feed_id = props.api_feed_id;
   var feed_type = props.api_feed_type;
+  var main_styles = props.main_styles;
   return (
       <div className="torch-api-feed-app">
         <header className="torch-api-feed-app-header">
@@ -20,7 +22,7 @@ function App (props) {
           <img style={{maxWidth: '100%'}} src={base_url + "/embed/torch-api-feed/logo.svg"} />
         </a>
         </header>
-        <main>
+        <main style={main_styles}>
           <TorchFeed feed_id={feed_id} feed_type={feed_type} base_url={base_url}/>
         </main>
       </div>
@@ -34,8 +36,8 @@ export default function TorchRoot() {
 
 }
 
-window.torch_app_init = function (api_feed_type, api_feed_id, base_url) {
-  render(<App api_feed_id={api_feed_id} api_feed_type={api_feed_type} base_url={base_url} />, document.getElementById('torch_root') )
+window.torch_app_init = function (api_feed_type, api_feed_id, base_url, main_styles) {
+  render(<App api_feed_id={api_feed_id} api_feed_type={api_feed_type} base_url={base_url} main_styles={main_styles}/>, document.getElementById('torch_root') )
 }
 
 

@@ -19,7 +19,7 @@ export default class FacebookComponent extends Component {
         <header style={header_style}>
           <img style={thumbnail_style} src={post.profile_image} />
           <h3 style={title_style}>
-          <a style={{textDecoration: 'none', color: "inherit", textTransform: 'capitalize'}} target="_blank" href={"https://facebook.com/" + post.post_id}>
+          <a style={{textDecoration: 'none', color: "inherit", textTransform: 'capitalize'}} target="_blank" href={"https://facebook.com/" + post.post_id_str}>
             {post.name.toLowerCase()}
           </a>
           <div style={username_style}>@{post.username}</div> 

@@ -10,7 +10,7 @@ class TorchFeed extends Component {
       items: [],
       isLoaded: false,
 
-      url : `https://cors-anywhere.herokuapp.com/${props.base_url}/api/${props.feed_type}/${props.feed_id}`
+      url : `${props.base_url}/api/${props.feed_type}/${props.feed_id}`
      //url : `/torch-api-feed/posts.json`
     }
       this.get = this.get.bind(this);
@@ -51,7 +51,7 @@ class TorchFeed extends Component {
       <div style={containerStyle}>
         {items.map((item, i) =>(
           <div className="torch-api-feed-post-container" key={"torch_posts_feed_" + i}>
-            <TorchItemComponent item={item} />
+            <TorchItemComponent base_url={this.props.base_url} item={item} />
           </div>
         ))}
       </div>

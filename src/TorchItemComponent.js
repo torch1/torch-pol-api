@@ -17,7 +17,7 @@ class TorchItemComponent extends Component {
           return ( <FacebookComponent item={this.props.item} /> )
     }
     if(type === 'instagram'){
-          return ( <InstagramComponent item={this.props.item} /> )
+          return ( <InstagramComponent base_url={this.props.base_url} item={this.props.item} /> )
     }
     return null; 
   }

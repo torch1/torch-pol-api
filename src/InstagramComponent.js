@@ -17,26 +17,36 @@ function on_image_error(post_id) {
 }
 
 export default class InstagramComponent extends Component {
-  //state = {thumbnail_url:  null};
+  state = {thumbnail_url:  null, retry: true};
+  constructor(props) {
+    super(props);
+    this.onError = this.onError.bind(this);
+  }
 
 
-    /*
   componentDidMount() {
 
     var post = this.props.item.post;
-    var post_endpoint = `https://api.instagram.com/oembed/?url=http://instagr.am/p/${post.youtube_id}`;
-    fetch(post_endpoint).then(response => {
-      response.json().then(data => {
-        this.setState({thumbnail_url: data.thumbnail_url});
-      });
-    });
-
+    var image_url = post.image_url;
+    if (!(image_url && image_url.indexOf('api.instagram.com') === -1)){
+      image_url =`${this.props.base_url}/instagrams/thumbnail/` + post.youtube_id;
+      this.setState({thumbnail_url: image_url, retry: false});
+    } else {
+      this.setState({thumbnail_url: image_url, retry: true});
+    }
   }
-  */
+  onError(state) {
+    if (this.state.retry) {
+      var post = this.props.item.post;
+      this.setState({
+        thumbnail_url: `${this.props.base_url}/instagrams/thumbnail/` + post.youtube_id,
+        retry: false,
+      });
+    }
+  }
 
   render() {  
     var post = this.props.item.post;
-
     //var embed = <div><img width="400px" src={post.image_url} /></div>
     return ( 
       <div style={card_style} className="clearfix ">
@@ -51,7 +61,7 @@ export default class InstagramComponent extends Component {
         </header>
         {/*<h4>{post.attachment_title}</h4>*/}
         <div style={content_style}>
-          <img width="192px" className="post-thumbnail" alt="thumbnail" src={`https://api.instagram.com/p/${post.youtube_id}/media`} style={{float: 'left', marginRight: 12}} />
+          <img width="192px" className="post-thumbnail" alt="thumbnail" src={this.state.thumbnail_url} onError={this.onError} style={{float: 'left', marginRight: 12}} />
           <div style={{...username_style ,paddingBottom: 6}}><DateText date_string={post.created} /></div>
           <p style={text_style} dangerouslySetInnerHTML={{__html: post.text}}></p>
           {/*<span>{post.plays_count} views </span> | */}

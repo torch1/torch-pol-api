@@ -18,22 +18,19 @@
   word-break: break-all;
  }
 .torch-api-feed-app main{
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
   padding: 10px 0 !important;
   background-color: #f9f9f9;
 }
 
 .torch-api-feed-app-header {
   background-color: #282c34;
-  padding:12px;
+  padding:0 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  height: 80px;
 }
 
 .torch-api-feed-app-link {
