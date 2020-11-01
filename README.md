@@ -38,7 +38,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 
-### How to updates the files on the Torch web server
+### How to update the files on the Torch web server
 ** Steps to upload your local build (after running `npm run build`) to the Torch web server.
 
 - Replace the file `torch/webroot/embed/torch-api-feed/asset-manifest.json` on the server `[torch-api-feed-project-root]/build/asset-manifest.json from your local build.
